@@ -1,1 +1,7 @@
+git init: khởi tạo 1 local repository
 git remote add origin: liên kết local và remote
+git add: đưa file vào trong vùng staged
+git commit: ghi nhận các sự thay đổi 
+git push: đưa các thay đổi từ local lên remote
+git clone: tải 1 remote về local
+git pull: cập nhật từ remote về local
