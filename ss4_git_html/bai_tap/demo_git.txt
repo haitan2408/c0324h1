@@ -1,0 +1,1 @@
+git remote add origin: liên kết local và remote
