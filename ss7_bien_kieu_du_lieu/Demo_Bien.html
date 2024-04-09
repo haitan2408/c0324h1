@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="hello()">Click me</button>
+<script>
+    // var diemToan; //undefined
+    console.log(diemToan)
+    var diemToan = 5;
+    let diemLy = 6;
+    var diemToan = 7; //Khai báo lại
+    diemLy = 8; // Gán
+    alert(diemToan)
+    alert(diemLy)
+
+    function hello() {
+        var diemHoa = 6;
+         alert(1);
+         if(diemHoa >5) {
+
+             let dtb = (diemToan + diemLy + diemHoa)/3
+         }
+         alert(dtb);
+        alert(2)
+    }
+    // alert(diemHoa)
+    const PI = 3.14
+
+    diemToan +=1; //diemToan = diemToan + 1;
+    diemLy %=3; //Điểm lý = 8 => diemLy = diemLy%3;
+
+    // diemToan >6.5 && dtb >8 => học sinh giỏi
+    let a = 5; //Number
+    // a++; //6
+    let b = "5"; //String
+    a==b // True
+    a===b //False
+
+    // Bài tập về nhà. Cho kết quả và giải thích tại sao ra kết quả đó.
+    // Cong 200, 100 và 40 cho 3 bạn nhanh và đúng nhất
+    let x = 5;
+    let y = 6;
+    let z = 7;
+    let result = x++ + --y + z++ - --x - ++z + y++;
+
+    let name = "haiTT";
+    let result1 = name + "Quảng Nam" //haiTTQuảng Nam
+    let d = 8 + 7 + "5" //d = "155"
+    // "5" + "6" + "7" => "567"/3 => 567/3
+
+
+</script>
+</body>
+</html>
