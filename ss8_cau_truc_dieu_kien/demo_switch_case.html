@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let month = prompt("Input month:")
+    // Switch sẽ so sánh sử dụng ===
+    switch (month){
+        default: {
+            alert(1);
+            break;
+        }
+        case "1":
+        case "3":
+        case "5":
+        case "7":
+        case "8":
+        case "10":
+        case "12":
+            alert("Month: "+ month +" has 31 days")
+            break;
+        case "4":
+
+        case "6":
+        case "9":
+        case "11":
+            alert("Month:" +month +" has 30 days");
+            break;
+        case "2":
+            let year =prompt("Input year:")
+            // if (year % 4 == 0){
+            //     if (year % 100 ==0 ){
+            //         if(year % 400 == 0){
+            //             noti = year + ' is a Leap year and has 29 days';
+            //         }
+            //         else {
+            //             noti = year + ' is not a leap year and has 28 days';
+            //         }
+            //     }else {
+            //         noti = year + ' is a leap year and has 29 days'
+            //     }
+            // } else {
+            //     noti = year + " is not a leap year and has 28 days "
+            // }
+            if (((year % 4) === 0 && (year % 100) !== 0) || (year %400 ===0)) {
+                alert("Tháng có 29 ngày")
+            } else {
+                alert("Tháng có 28 ngày");
+            }
+
+    }
+    // alert(noti)
+
+    // let thang = +prompt("Nhập vào tháng cần kiểm tra");
+    // if (thang >= 1 && thang <= 12) {
+    //     if (thang === 1 || thang === 3 || thang === 5 || thang === 7 || thang === 8 || thang === 10 || thang === 12) {
+    //         alert("Tháng có 31 ngày")
+    //     } else if (thang === 4 || thang === 6 || thang === 9 || thang === 11) {
+    //         alert("Tháng có 30 ngày")
+    //     } else {
+    //         let nam = +prompt("Nhập năm để kiểm tra")
+    //         if ((nam % 4) === 0 && (nam % 100) !== 0) {
+    //             alert("Tháng có 29 ngày")
+    //         } else if (nam % 400 === 0) {
+    //             alert("Tháng có 29 ngày");
+    //         } else {
+    //             alert("Tháng có 28 ngày");
+    //         }
+    //     }
+    // } else {
+    //     alert("Không phải tháng trong năm")
+    // }
+//     Cú pháp if bậc thang
+
+</script>
+</body>
+</html>
