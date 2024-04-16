@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let dtbA = prompt("Mời bạn nhập điểm của A")
+    // let dtbB = prompt("Mời bạn nhập điểm của B")
+    // let dtbC = prompt("Mời bạn nhập điểm của C")
+    // let dtbD = prompt("Mời bạn nhập điểm của D")
+    // let dtbE = prompt("Mời bạn nhập điểm của E")
+    //
+    // let dtbCuaLop = (dtbA + dtbB + dtbC + dtbD + dtbE)/5;
+    // alert(dtbCuaLop);
+
+    // Bài tập về nhà: Suwr dụng mảng thay cho ví dụ trên. Yêu cầu:
+    // - Số lương phần tử là tùy chỉnh. Tuùy thuộc vào người dùng
+    // Sử dụng if và vòng lặp để kiểm tra dữ liệu nhập vào (là số, 0 => 10)
+    // Deadline 16h chiều này. Lấy top 3 (400, 300, 200). Còn những bạn còn lại th cộng 100 point
+
+    //     Cách khai báo và khởi tạo mảng.
+    let arr = [1, 2, 3, 4, 5, 6];
+    console.log(arr) // => 1->6
+    let arr1 = new Array(1, 2, 3);
+    console.log(arr1);
+
+
+    console.log(arr.length) // 6
+
+    let length = arr.length;  //length = 6
+    //for i
+    for (let i = 0; i < length; i++) {
+        // Thay đổi kích thước của mảng => chết chương trình hoặc không kiểm soát được giá trị
+        console.log(arr[i])
+    }
+
+
+    for (let i = length - 1; i >= 0; i--) {
+        console.log(arr[i])
+    }
+
+    // Tìm vij trí của số lớn nhất trong mảng
+    for (let i in arr) {
+        //     i: 0 - 5;
+    }
+
+    // Tìm giá trị lớn nhất trong mảng
+    for (let item of arr) {
+        // item: 1 => 6
+    }
+
+    //     Lấy tổng giá trị của các phần tuwrở vị trí chẵn
+    let sum = 0;
+    for (let i = 0; i < length; i = i + 2) {
+        sum += arr[i];
+    }
+
+    arr.forEach(function (item, index) {
+        console.log(item)
+        console.log(index)
+    })
+//     map, filter, reduce: Tìm hiểu thêm
+//     tương đương với for-of
+
+
+
+</script>
+</body>
+</html>

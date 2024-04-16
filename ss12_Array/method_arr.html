@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr = ["a", "HaiTT", "C03"];
+    //     Thêm phần tử: push, unshift, splice
+    // arr.push("C04", "Kieu Anh");
+    // arr.unshift("b")
+    // console.log(arr);
+    // arr.splice(3, 0, "x", "y", "z") //Thêm bắt đầu từ vị trí index = 3
+
+    //     Xóa phàn tủ: splice, pop, shift
+    // console.log(arr.pop()); //return hàm
+    // console.log(arr);
+    // console.log(arr.shift())
+    // console.log(arr);
+    // arr.splice(2, 1)
+    // console.log(arr);
+
+//     concat: nối mảng
+//     reverse: đảo mảng
+//     sort: sắp xếp (mặc định sẽ sắp xếp theo String ASCII và theo từng ký tự)
+//     "HaiTT", "H03"; A và a => A ở vị trí nhỏ hơn;
+    let arr1 = [112, 2, 456, 10];
+    arr1.sort()
+    console.log(arr1);
+
+//     Ghi đè Override
+    arr1.sort(function (a,b) {
+        return a - b;
+    })
+
+    console.log(arr1)
+
+
+
+</script>
+</body>
+</html>
