@@ -1,0 +1,28 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="input">Feet or Meter</label><input id="input">
+    <button onclick="alert(feetToMeter(document.getElementById('input').value))">Feet to Metter</button>
+    <button onclick="alert(meterToFeet(document.getElementById('input').value))">Metter to Feet</button>
+<script>
+    function feetToMeter(feet) {
+        let meter = 0.305 * feet;
+        return meter;
+    }
+    function meterToFeet(meter) {
+        let feet = 3.279 * meter;
+        return feet;
+    }
+    // let feetInput = parseFloat(prompt("Nhập (feet)"));
+    // let meterInput = parseFloat(prompt("Nhập (meter)"));
+    // document.write(feetInput +"feet" + "=" + feetToMeter(feetInput) + "meter <br>");
+    // document.write(meterInput + " meter " + " = " + meterToFeet(meterInput) + " feet")
+</script>
+</body>
+</head>
+</html>

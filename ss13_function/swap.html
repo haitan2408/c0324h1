@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function swap(a, b) {
+        //     //a = 5; b = 6
+        //     let c = a;  // c = 5
+        //     a = b; //a = b = 6;
+        //     b = c; // b = c = 5
+        //     //=> a = 6; b = 5;
+        // }
+
+        // let a_temp = 5;
+        // let b_temp = 6;
+        // swap(a_temp, b_temp);
+        // console.log(a_temp, b_temp);
+        //=> Kết quả: a = 5; b = 6;
+
+        function swap(arr) {
+            //a = 5; b = 6
+            let c = arr[0];  // c = 5
+            arr[0] = arr[1]; //a[0] = arr[1] = 6;
+            arr[1] = c; // arr[2] = c = 5
+            //=> a[0] = 6; arr[1] = 5;
+        }
+    
+        let arr_temp = [5,6];
+        swap(arr_temp);
+        console.log(arr_temp);
+        // Kết quả: [6, 5]
+    </script>
+</body>
+
+</html>

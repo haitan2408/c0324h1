@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body onload="drawBoard()">
+    <script>
+        let isPlayer1 = true;
+        let arr = [["", "", "", ""], ["", "", "", ""], ["", "", "", ""], ["", "", "", ""]];
+    //    Vẽ bàn cờ
+        function drawBoard() {
+            let board = "<table width = '200px' height = '200px' border = '1'>"
+            for (let i = 0; i < 4; i++) {
+                board += "<tr>"
+                for (let j = 0; j < 4; j++) {
+                    board += "<th width='50px' height = '50px' onclick = 'play(" + i + "," + j + ")'>" + arr[i][j] + "</th>"
+                }
+                board += "</tr>"
+            }
+            board += "</table>";
+            document.body.innerHTML = "";
+            document.write(board);
+
+        }
+        // Chơi game. Tick X hoặc O
+        function play(i, j) {
+            if (arr[i][j] == "") {
+                if (!isPlayer1) {
+                    arr[i][j] = "X";
+                    checkWin("X");
+                } else {
+                    arr[i][j] = "O";
+                    checkWin("O");
+                }
+                // Đổi lại người chơi. Nếu tick O thì người tiếp theo sẽ là X
+                isPlayer1 = !isPlayer1;
+                drawBoard();
+            }
+        }
+
+        // Kiểm tra người chiến thắng
+        function checkWin(char) {
+            //  Kiểm tra đường chéo thuận
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 2; j++) {
+                    if (arr[i][j] == char) {
+                        if (arr[i + 1][j + 1] == char && arr[i + 2][j + 2] == char) {
+                            alert(char+ " là nguoi thang")
+                            return;
+                        }
+                    }
+                }
+            }
+
+            // Kiểm tra hàng ngang
+            for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 2; j++) {
+                    if (arr[i][j] == char) {
+                        if (arr[i][j + 1] == char && arr[i][j + 2] == char) {
+                            alert(char + " là nguoi thang")
+                            return;
+                        }
+                    }
+                }
+            }
+
+            // Kiểm tra hàng dọc
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 4; j++) {
+                    if (arr[i][j] == char) {
+                        if (arr[i + 1][j] == char && arr[i + 2][j] == char) {
+                            alert(char + " là nguoi thang")
+                            return;
+                        }
+                    }
+                }
+            }
+
+            // Kiểm tra hàng chéo ngược
+            for (let i = 0; i < 2; i++) {
+                for (let j = 2; j < 4; j++) {
+                    if (arr[i][j] == char) {
+                        if (arr[i + 1][j - 1] == char && arr[i + 2][j - 2] == char) {
+                            alert(char + " là nguoi thang")
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

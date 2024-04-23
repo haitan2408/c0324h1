@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nhập số<input id="num"> <button onclick="checkAnyNum()">Kiểm tra số</button>
+    <script>
+        
+        // Kiểm tra 1 số bất kỳ. Tuy nhiên nếu áp dụng cho bài toán hiển 
+        // thị 100 số nguyên tố thì cần viết 1 hàm khác gần tương tự
+        // => Tốn thời gian, công sức => Tái sử dụng của hàm?
+        // function checkPrime() {
+        //     let num = +prompt("Mời bạn nhập số cần kiểm tra")
+        //     let isPrime = true;
+        //     for (let i = 2; i <= Math.sqrt(num); i++) {
+        //         if (num % i === 0) {
+        //             isPrime = false;
+        //         }
+        //     }
+        //     if (isPrime) {
+        //         alert(num + " là số nguyên tố")
+        //     } else {
+        //         alert(num + " không phải là số nguyên tố")
+        //     }
+        // }
+        // checkPrime();
+
+        function checkAnyNum() {
+            let isPrime = checkPrime(+document.getElementById('num').value);
+            if(isPrime) {
+                console.log("là số nguyên tố");
+            } else {
+                console.log("Không phải là số nguyên tố");
+            }
+        }
+
+        function isPrime(num) {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        let count = 0;
+        let i = 2;
+        while (count < 20) {
+            let isPrime = checkPrime(i);
+            if (isPrime) {
+                console.log(i + " là số nguyên tố")
+                count++;
+            }
+            i++;
+        }
+    </script>
+</body>
+
+</html>
